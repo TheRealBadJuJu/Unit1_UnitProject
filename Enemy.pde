@@ -10,6 +10,11 @@ class Enemy
   Enemy()
   {
     location = new PVector(random(-2000, 2000), random(-2000, 2000));
+    if(dist(location.x,location.y,width/2,height/2)<500)
+    {
+      location.x = (int)random(0,2000);
+      location.y = 2000;
+    }
     velocity = new PVector(100, 100);
     vel = new PVector(0, 0);
     Speed = 2;
